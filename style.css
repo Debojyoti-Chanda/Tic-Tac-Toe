@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+ul li{
+    list-style-type: none;
+}
+
+.gameContainer{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top:5vh;
+    min-height:80vh;
+}
+.container{
+    display: grid;
+
+    /* grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 150px 150px 150px; */
+    grid-template-columns: repeat(3,10vh);
+    grid-template-rows: repeat(3,10vh);
+    /* border: 2px solid black; */
+    position: relative;
+
+
+}
+.gameInfo{
+    padding-top: 40px;
+}
+.box{
+    border: 2px solid black;
+    border-collapse:collapse;
+    font-size: max(60px,5vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: black;
+    color: aliceblue;
+}
+
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.imgbox img{
+    /* display: none; */
+    width: 0;
+    transition: width 1s ease-in;
+}
+#reset {
+    margin: 7px 33px;
+    margin-left: 110px;
+    padding: 6px 14px;
+    background-color: antiquewhite;
+    font-size: medium;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.line {
+    background-color: rgb(161, 165, 154);
+    height: 4px;
+    width: 0 ; /*30vh*/
+    position: absolute;
+    display:none;
+    /* transform: translate(0vh,15vh) rotate(0deg); */
+    transition: width 1s ease-in;
+
+}
+footer{
+    height: 5vh;
+    background-color: black;
+    color: aliceblue;
+}
+@media screen and (min-width:1000px) {
+    .gameContainer{
+        flex-direction: row;
+    }
+    .container{
+        grid-template-columns: repeat(3,20vh);
+        grid-template-rows: repeat(3,20vh);
+    }
+    .gameInfo{
+        padding-left: 40px;
+        padding-top: 0;
+        font-size: 2vw;
+    }
+    .box{
+        font-size: 9vw;
+    }
+    /* .line{
+        width:60vw;
+        
+    }  */
+}
